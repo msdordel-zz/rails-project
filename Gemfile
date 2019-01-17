@@ -6,25 +6,18 @@ git_source(:github) do |repo_name|
 end
 
 
+gem 'devise'
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-#use postgres to make it work on heroku
-
-=begin
-group :development do
-  gem 'sqlite3'
-end
-group :production do
-  gem 'pg'
-end
-=end
-
-
+# Use carrierwave for pic uploads
 gem 'carrierwave'
 gem 'mini_magick', '4.8.0'
-
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -37,8 +30,6 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'devise'
-gem 'gravtastic'
-
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
